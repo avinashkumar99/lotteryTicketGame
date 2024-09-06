@@ -1,7 +1,6 @@
 import { useState } from "react"
 
 
-
 export default function Lottery () {
     const [lotteryTicket, setLotteryTicket] = useState(0);
     const [sum, setSum] = useState(0);
