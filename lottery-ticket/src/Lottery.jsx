@@ -1,38 +1,21 @@
 import { useState } from "react"
-
+import Ticket from './Ticket';
+import WinningCriteria from "./WinningCriteria";
+import './Lottery.css';
+import Btn from "./Btn";
 
 export default function Lottery () {
-    const [lotteryTicket, setLotteryTicket] = useState(0);
-    const [sum, setSum] = useState(0);
-    const handleGenerateTicket = ()=> {
-        console.log("generating...");
-        let ticket = Math.floor(Math.random()*900) + 100;
- 
-        console.log(ticket);
-        let newTicket = lotteryTicket;
-        let tempSum = 0;
-        while(newTicket>0) {
-    
-            let lastDigit = newTicket % 10;
-            tempSum += lastDigit;
-            newTicket = Math.floor(newTicket/10);
-        }
-        setSum(tempSum);
-        setLotteryTicket(ticket);
-        
-    }
-    console.log(`Sum is ${sum}`);
-
-    // sum = 15;
-
-
     return <>
-    <div>
+    <div className="box">
         <h1>Lottery</h1>
-        <h4>Lottery ticket : { lotteryTicket }</h4>
-        {sum === 15 ? <p>You won the game!</p> : <p>Try again!</p>}
-        <p>Sum : { sum }</p>
-        <button onClick={handleGenerateTicket}>Generate Ticket</button>
+        < WinningCriteria />
+        <div className="board">
+        
+        <Ticket />
+        <Ticket />
+        <Ticket />
+        </div>
+        <Btn />
     </div>
     </>
 };

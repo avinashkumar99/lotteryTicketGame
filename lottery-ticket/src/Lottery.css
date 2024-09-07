@@ -1,0 +1,29 @@
+.board {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 2rem auto;
+    justify-content: center;
+    height: 25rem;
+    width: 25rem;
+    box-shadow: rgba(239, 241, 243, 0.2) 0px 8px 24px;
+}
+.win-criteria {
+    height: 15%;
+    width: 50%;
+    background-color: white;
+    margin: 2rem auto;
+    border-radius: 5rem;
+    position: relative;
+}
+
+.box {
+    height: 80%;
+    width: 80%;
+    margin: 0 auto;
+
+    /* background-color: white; */
+}
+.box h1 {
+    font-size: 3rem;
+}
