@@ -1,0 +1,69 @@
+.container {
+    height: 6rem;
+    width: 100%;
+    box-shadow: rgba(239, 241, 243, 0.2) 0px 8px 24px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+
+}
+.logo {
+    height: 3rem;
+    width: 6rem;
+    background-color: white;
+    border-radius: 1rem;
+    margin: 0 2rem;
+}
+
+.logo i {
+    height: 90%;
+    width: 100%;
+    color: red;
+    font-size: 3rem;
+}
+
+.logo-name {
+    height: 2rem;
+    width: 80%;
+    font-size: 1.5rem;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+
+}
+.logo-name span {
+    background-color: #413f3f1c;
+    color: whitesmoke;
+
+    
+}
+
+.about-container {
+    width: 6rem;
+    height: 4rem;
+    display: flex;
+    margin: 0 auto;
+    padding: 1rem 0;
+    align-items: center;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.about-container::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: width 0.4s ease-in-out;
+}
+
+.about-container:hover::after {
+    width: 100%;
+}

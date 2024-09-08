@@ -1,29 +1,73 @@
 .board {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     margin: 2rem auto;
     justify-content: center;
     height: 25rem;
-    width: 25rem;
+    width: 80%;
+    align-self: center;
     box-shadow: rgba(239, 241, 243, 0.2) 0px 8px 24px;
 }
 .win-criteria {
-    height: 15%;
-    width: 50%;
+    height: 10rem;
+    width: 70%;
     background-color: white;
     margin: 2rem auto;
-    border-radius: 5rem;
+    border-radius: 1rem;
     position: relative;
+    color: black;
+    padding: 1rem;
+    font-size: 1.5rem;
+    align-self: end;
+}
+.win-criteria p span {
+    background-color: yellow;
+    padding: 0 0.3rem;
+    color: red;
+
+}
+.win-criteria h4,p {
+    margin-top: 0.25rem;
+}
+.win-criteria h4 {
+    text-decoration: underline;
 }
 
 .box {
-    height: 80%;
+    height: 85%;
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
 
-    /* background-color: white; */
 }
 .box h1 {
     font-size: 3rem;
+}
+
+.won {
+    margin: 1rem 0;
+    font-size: 1.3rem;
+    background-color: yellow;
+    color: black;
+    padding: 1rem;
+    border-radius: 2rem;
+    
+    display: inline-block;
+}
+
+.won span {
+    color: red;
+}
+
+.ticket-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.win-box {
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
 }
